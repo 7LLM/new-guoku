@@ -16,16 +16,16 @@
 		<section class="banner">
 			<Banner swiperid="homeswiper" paginationtype="bullets" effecttype="coverflow" :autoplaytype=true :looptype=false>
 				<div slot="swiper_con" class="swiper-slide">
-					<img src="../../assets/banner/banner01.jpg" />
+					<img src="http://img.guocool.com/product/2018/06/20/2a2ee8051a4549e88550db03fb96cca9.jpg" />
 				</div>
 				<div slot="swiper_con" class="swiper-slide">
-					<img src="../../assets/banner/banner02.jpg" />
+					<img src="http://img.guocool.com/product/2018/08/29/83c606b70b8e434facacd0763557f924.jpg" />
 				</div>
 				<div slot="swiper_con" class="swiper-slide">
-					<img src="../../assets/banner/banner03.jpg" />
+					<img src="http://img.guocool.com/product/2018/04/23/b5ab0362f1c24158803d747997bdc238.jpg" />
 				</div>
 				<div slot="swiper_con" class="swiper-slide">
-					<img src="../../assets/banner/banner04.jpg" />
+					<img src="http://img.guocool.com/product/2017/06/14/a88b9ea29b174f6296c12d86672935b6.jpg" />
 				</div>
 			</Banner>
 		</section>

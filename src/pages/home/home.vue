@@ -59,11 +59,11 @@
 				</ul>
 			</div>
 			<!--更多部分图标-->
-			<a href="#" class="learnMore"><img src="../../assets/homeImg/s_14.png" /></a>
+			<a href="#" class="learnMore"><img src="http://www.guocool.com/images/s_14.png" /></a>
 		</header>
 		<!--轮播图部分-->
 		<section class="banner">
-			<div><img src="../../assets/homeImg/home1_03.jpg" /></div>
+			<div><img src="http://www.guocool.com/images/home1_03.jpg" /></div>
 			<Banner swiperid="homeswiper" paginationtype="bullets" effecttype="coverflow" :autoplaytype=true :looptype=false>
 				<div slot="swiper_con" class="swiper-slide">
 					<img src="../../assets/banner/home1_lunbo_01.jpg" />
@@ -129,7 +129,7 @@
 		</section>
 		<!--申请体验部分-->
 		<section class="experience">
-			<img class="store" src="../../assets/homeImg/home1_10.jpg"/>
+			<img class="store" src="http://www.guocool.com/images/home1_10.jpg"/>
 			<div class="experience_cen">
 				<p class="super">
 					<span>商超便利&新零售</span><br />Supermarket Convenience Stores&New retail
@@ -143,7 +143,7 @@
 		</section>
 		<!--招募合伙人部分-->
 		<section class="partner">
-			<img src="../../assets/homeImg/home1_13.jpg"/>
+			<img src="http://www.guocool.com/images/home1_13.jpg"/>
 			<div class="partner_center">
 				<p>我们是谁</p>
 				<p>
@@ -154,7 +154,7 @@
 					<br>切行业的领军企业。
 				</p>
 			</div>
-			<img src="../../assets/homeImg/home1_15.jpg"/>
+			<img src="http://www.guocool.com/images/home1_15.jpg"/>
 			<!--申请函-->
 			<div class="partner_bottom">
 				<h3>果酷城市合伙人加入申请函</h3>
@@ -191,7 +191,7 @@
 	header {
 		text-align: center;
 		padding: 40px 0 0 0;
-		background: url(../../assets/homeImg/home1_01.jpg) no-repeat;
+		background: url(http://www.guocool.com/images/home1_01.jpg) no-repeat;
 		background-size: cover;
 		background-position: center;
 	}
@@ -321,7 +321,7 @@
 		.rotate_div {
 			position: relative;
 			height: 602px;
-			background: url(../../assets/homeImg/home1_06.jpg) no-repeat;
+			background: url(http://www.guocool.com/images/home1_06.jpg) no-repeat;
 			background-size: cover;
 			background-position: center;
 			font-size: 28px;
@@ -345,7 +345,7 @@
 		text-align: center;
 		width: 100%;
 	    height: 933px;
-	    background: url(../../assets/homeImg/home1_08.jpg) no-repeat;
+	    background: url(http://www.guocool.com/images/home1_08.jpg) no-repeat;
 	    background-size: cover;
 	    background-position: center;
 	    .member_left{
@@ -404,7 +404,7 @@
 			padding-top: 23%;
 			color: #fff;
 			height: 840px;
-			background: url(../../assets/homeImg/home1_11.jpg) no-repeat;
+			background: url(http://www.guocool.com/images/home1_11.jpg) no-repeat;
 			background-size: cover;
 			background-position: center;
 			.super{
@@ -423,7 +423,7 @@
 	.partner{
 		text-align: center;
 		>div{
-			background: url(../../assets/homeImg/home1_14.jpg) no-repeat;
+			background: url(http://www.guocool.com/images/home1_14.jpg) no-repeat;
 			background-size: cover;
 			background-position: center;
 		}
@@ -445,7 +445,7 @@
 			height: 740px;
 			box-sizing: border-box;
 			padding-top: 12%;
-			background-image: url(../../assets/homeImg/home1_16.jpg);
+			background-image: url(http://www.guocool.com/images/home1_16.jpg);
 			h3{
 				color: #fff;
 				font-size: 36px;
