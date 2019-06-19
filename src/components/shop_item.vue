@@ -6,7 +6,7 @@
 				<ul class="content">
 					<li v-for="item in arr">
 						<a href="#">{{item.shoop}}</a>
-						<span style="color: rgb(255,255,255);">></span>
+						<span>></span>
 					</li>
 				</ul>
 			</div>
@@ -47,7 +47,7 @@
 		
 	}
 </script>
-<style>
+<style lang="less">
 	.shop_item{
 		margin-top: 140px;
 		background: red;
@@ -65,10 +65,7 @@
 		background: #eb9621;
 	
 	}
-	h3{
-		margin-right:80px;
-		color: #fff;
-	}
+	
 	.list>li{
 		width: 80px;
 		text-align: center;
@@ -89,13 +86,22 @@
 		line-height: 60px;
 		height: 60px;
 		z-index: 1;
+		color: #fff;
 	}
 	.content>li:hover{
 		background: #fff;
+		color: #FF0000;
+		&:hover a{
+			color: #FF0000;
+		}
 			
 	}
 	#shoop{
 		position: relative;
+		h3{
+			margin-right:80px;
+			color: #fff;
+		}
 	}
 	#shoop:hover> .content{
 		display: block;

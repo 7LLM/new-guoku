@@ -119,6 +119,10 @@
 					a {
 						text-decoration: none;
 						color: #666;
+						&:hover{
+							color: #FF0000;
+							text-decoration: underline;
+						}
 					}
 					&:before {
 						content: '';
@@ -251,6 +255,10 @@
 			padding-left: 20px;
 			color: #666;
 			font-size: 14px;
+			&:hover{
+				color: #FF0000;
+				text-decoration: underline;
+			}
 		}
 	}
 </style>
