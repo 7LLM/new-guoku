@@ -2,11 +2,11 @@
 	<div class="shop_item">
 		<div class="warp item">
 			<div id="shoop">
-				<h3>全部商品分类 <img style="vertical-align: middle;" src="../assets/logo/nav_all_classify.png"/></h3>
+				<h3 class="all">全部商品分类 <img style="vertical-align: middle;" src="../assets/logo/nav_all_classify.png"/></h3>
 				<ul class="content">
 					<li v-for="item in arr">
 						<a href="#">{{item.shoop}}</a>
-						<span style="color: rgb(255,255,255);">></span>
+						<span>></span>
 					</li>
 				</ul>
 			</div>
@@ -65,14 +65,10 @@
 		background: #eb9621;
 	
 	}
-	h3{
-		margin-right:80px;
-		color: #fff;
-	}
+	
 	.list>li{
 		width: 80px;
 		text-align: center;
-		
 	}
 	a{
 		color: #fff;
@@ -89,14 +85,22 @@
 		line-height: 60px;
 		height: 60px;
 		z-index: 1;
+		color: #fff;
 	}
 	.content>li:hover{
 		background: #fff;
-			
+		color: #FF0000;
+	}
+	.content>li:hover a{
+		color: #FF0000;
 	}
 	#shoop{
 		position: relative;
 	}
+	.all{
+			margin-right:80px;
+			color: #fff;
+		}
 	#shoop:hover> .content{
 		display: block;
 	}

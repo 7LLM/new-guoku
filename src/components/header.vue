@@ -80,7 +80,8 @@
 <style lang="less">
 	.headWarp {
 		width: 100%;
-		position: fixed;top: 0;
+		position: fixed;
+		top: 0;
 		z-index: 55;
 		background: #FFFFFF;
 		.header {
@@ -119,6 +120,9 @@
 					a {
 						text-decoration: none;
 						color: #666;
+						&:hover{
+							color: #FF0000;
+						}
 					}
 					&:before {
 						content: '';
@@ -251,6 +255,9 @@
 			padding-left: 20px;
 			color: #666;
 			font-size: 14px;
+			&:hover{
+				color: #FF0000;
+			}
 		}
 	}
 </style>
