@@ -1,40 +1,149 @@
 {
-   
-    "data": [
-        {
-            "recommend": "static/recommend_img1.jpg",
-            "group_list": [
-                {
-                    "img_url": "static/huifruits_21.jpg",
-                    "produ_name": "迷你果盒：应季流行",
-                    "pro_price": "￥6.00"
-                },
-                {
-                    "img_url": "static/huifruits_21.jpg",
-                    "produ_name": "迷你果盒：应季流行",
-                    "pro_price": "￥6.00"
-                },
-                {
-                    "img_url": "static/huifruits_21.jpg",
-                    "produ_name": "迷你果盒：应季流行",
-                    "pro_price": "￥6.00"
-                },
-                {
-                    "img_url": "static/huifruits_21.jpg",
-                    "produ_name": "迷你果盒：应季流行",
-                    "pro_price": "￥6.00"
-                },
-                {
-                    "img_url": "static/huifruits_21.jpg",
-                    "produ_name": "迷你果盒：应季流行",
-                    "pro_price": "￥6.00"
-                },
-                {
-                    "img_url": "static/huifruits_21.jpg",
-                    "produ_name": "迷你果盒：应季流行",
-                    "pro_price": "￥6.00"
-                }
-            ]
-        }
-    ]
+	"data": [
+		{
+			"img_url": "http://img.guocool.com/product/2017/06/19/076df3cc9819433f818adc13c5f8f3d4.jpg",
+			"produ_name": "超级果盒：应季流行",
+			"pro_price": "￥14.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/c49299b954194e89af1ea405e5a99e5c.jpg",
+			"produ_name": "超级果盒：特别推荐",
+			"pro_price": "￥17.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/02ccce26222847e5bdb6c988cc2acdb1.jpg",
+			"produ_name": "三分果盒：明星主打",
+			"pro_price": "￥19.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/347c57ee7ae542e7b5015d8ff095c9dd.jpg",
+			"produ_name": "两分果盒：高级赏味",
+			"pro_price": "￥22.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/f17d81b2058f44458615a8d6547ca28d.jpg",
+			"produ_name": "两分果盒：特级精选",
+			"pro_price": "￥27.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/0444cb3c2c41447eb45e8dcd86e23a84.jpg",
+			"produ_name": "迷你果盒：季节限定",
+			"pro_price": "￥21.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/22/bfd2b7deeb654295be5c530a62cf489c.jpg",
+			"produ_name": "超级果盒：应季流行",
+			"pro_price": "￥25.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/5e562f13488e40008a3ab848c2318d62.jpg",
+			"produ_name": "超级果盒：特别推荐",
+			"pro_price": "￥28.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/884b2995d9334befba94cc8a2a07fff1.jpg",
+			"produ_name": "超级果盒：明星主打",
+			"pro_price": "￥27.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/41f9fe2dce5349bcb00ed309cb4a8aa1.jpg",
+			"produ_name": "超级果盒：高级赏味",
+			"pro_price": "￥24.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/61bd475c42274ee1b44b996e1f40e93d.jpg",
+			"produ_name": "超级果盒：特级精选",
+			"pro_price": "￥44.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/347c57ee7ae542e7b5015d8ff095c9dd.jpg",
+			"produ_name": "超级果盒：季节限定",
+			"pro_price": "￥22.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/076df3cc9819433f818adc13c5f8f3d4.jpg",
+			"produ_name": "三分果盒：应季流行",
+			"pro_price": "￥14.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/c49299b954194e89af1ea405e5a99e5c.jpg",
+			"produ_name": "三分果盒：特别推荐",
+			"pro_price": "￥17.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/02ccce26222847e5bdb6c988cc2acdb1.jpg",
+			"produ_name": "三分果盒：明星主打",
+			"pro_price": "￥19.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/347c57ee7ae542e7b5015d8ff095c9dd.jpg",
+			"produ_name": "三分果盒：高级赏味",
+			"pro_price": "￥21.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/f17d81b2058f44458615a8d6547ca28d.jpg",
+			"produ_name": "三分果盒：特级精选",
+			"pro_price": "￥24.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/0444cb3c2c41447eb45e8dcd86e23a84.jpg",
+			"produ_name": "三分果盒：季节限定",
+			"pro_price": "￥22.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/22/bfd2b7deeb654295be5c530a62cf489c.jpg",
+			"produ_name": "两分果盒：应季流行",
+			"pro_price": "￥10.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/61bd475c42274ee1b44b996e1f40e93d.jpg",
+			"produ_name": "两分果盒：特别推荐",
+			"pro_price": "￥8.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/36b94e9c3ac442e78b0232508212ea25.jpg",
+			"produ_name": "两分果盒：明星主打",
+			"pro_price": "￥12.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/2f55626c16fc4cdcac795f2b5a7ea7d2.jpg",
+			"produ_name": "两分果盒：高级赏味",
+			"pro_price": "￥20.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/b4cf83ab690744ac9c370cf8f78ed2e5.jpg",
+			"produ_name": "两分果盒：特级精选",
+			"pro_price": "￥24.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/21/a422b6dad5e84572ad9cb27285426235.jpg",
+			"produ_name": "两分果盒：季节限定",
+			"pro_price": "￥14.00"
+		},{
+			"img_url": "http://img.guocool.com/product/2017/06/19/076df3cc9819433f818adc13c5f8f3d4.jpg",
+			"produ_name": "迷你果盒：应季流行",
+			"pro_price": "￥16.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/c49299b954194e89af1ea405e5a99e5c.jpg",
+			"produ_name": "迷你果盒：特别推荐",
+			"pro_price": "￥18.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/02ccce26222847e5bdb6c988cc2acdb1.jpg",
+			"produ_name": "迷你果盒：明星主打",
+			"pro_price": "￥8.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/347c57ee7ae542e7b5015d8ff095c9dd.jpg",
+			"produ_name": "迷你果盒：高级赏味",
+			"pro_price": "￥12.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/f17d81b2058f44458615a8d6547ca28d.jpg",
+			"produ_name": "迷你果盒：特级精选",
+			"pro_price": "￥18.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/19/0444cb3c2c41447eb45e8dcd86e23a84.jpg",
+			"produ_name": "迷你果盒：季节限定",
+			"pro_price": "￥14.00"
+		},{
+			"img_url": "http://img.guocool.com/product/2017/06/20/4f3b1dbe478d4d86bff98fd735353dcc.jpg",
+			"produ_name": "彩虹果杯：应季流行",
+			"pro_price": "￥16.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/20/00793d674146416eb02280247b888efa.jpg",
+			"produ_name": "彩虹果杯：特别推荐",
+			"pro_price": "￥18.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/20/15439e9886604eab9bc2a7ffb97304ba.jpg",
+			"produ_name": "彩虹果杯：明星主打",
+			"pro_price": "￥8.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/20/84508be1d3cb4cd9b381e7d87b6b0c3d.jpg",
+			"produ_name": "彩虹果杯：高级赏味",
+			"pro_price": "￥12.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/20/e66b9e425fd543708698a413c37bdefe.jpg",
+			"produ_name": "彩虹果杯：特级精选",
+			"pro_price": "￥18.00"
+		}, {
+			"img_url": "http://img.guocool.com/product/2017/06/20/2c330d42e3c0422095647b1918f823c0.jpg",
+			"produ_name": "彩虹果杯：季节限定",
+			"pro_price": "￥14.00"
+		}
+	]
 }

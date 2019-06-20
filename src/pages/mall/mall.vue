@@ -40,16 +40,6 @@
 		</section>
 		<!--产品模块-->
 		<section class="produList">
-			<div class="produ_title">
-				<div> <span>>> 专利分格</span></div>
-				<ul class="subtitle">
-					<li><a href="#">专利分格</a></li>
-					<li><a href="#">专利分格</a></li>
-					<li><a href="#">专利分格</a></li>
-					<li><a href="#">专利分格</a></li>
-					<li><a href="#">专利分格</a></li>
-				</ul>
-			</div>
 			<FruitsModel></FruitsModel>
 		</section>
 		<!--底部-->
@@ -79,6 +69,7 @@
 	.nav2{
 		margin-top: 122px;
 		padding-left: 220px;
+		box-sizing: border-box;
 		width: 100%;
 		height: 35px;
 		line-height: 35px;
