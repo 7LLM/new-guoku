@@ -8,7 +8,8 @@
 						<a href="#">请登录</a>
 					</li>
 					<li>
-						<a href="#">免费注册</a>
+						<!--<a href="#">免费注册</a>-->
+						<router-link to="/resets">免费注册</router-link>
 					</li>
 					<li>
 						<a href="#">我的订单</a>
