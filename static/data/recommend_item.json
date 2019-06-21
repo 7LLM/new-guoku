@@ -1,0 +1,30 @@
+{
+	"data": [
+
+		{
+			"img_url": "http://img.guocool.com/200X200/product/2017/06/23/fef5f555a314464a8a1da91350b7de15.jpg",
+			"produ_name": "智利进口车厘子4斤",
+			"pro_price": "￥258.00"
+		}, {
+			"img_url": "http://img.guocool.com/200X200/product/2017/06/21/54e86e4c99ed4d21be5741b697fc73fc.jpg",
+			"produ_name": "方砖果杯：明星主打",
+			"pro_price": "￥15.00"
+		}, {
+			"img_url": "http://img.guocool.com/200X200/product/2017/06/19/41f9fe2dce5349bcb00ed309cb4a8aa1.jpg",
+			"produ_name": "二分果盒：明星主打",
+			"pro_price": "￥12.00"
+		}, {
+			"img_url": "http://img.guocool.com/200X200/product/2017/06/20/d4db569b5c25477cb653cd46f9838fdb.jpg",
+			"produ_name": "标准果杯：明星主打",
+			"pro_price": "￥16.00"
+		}, {
+			"img_url": "http://img.guocool.com/200X200/product/2017/06/20/662431d13e7c4077968879509ebb8f27.jpg",
+			"produ_name": "钻石果杯：季节限定",
+			"pro_price": "￥14.00"
+		}, {
+			"img_url": "http://img.guocool.com/200X200/product/2017/06/29/8e2de86589ba4c668a61c27cc565136f.jpg",
+			"produ_name": "能量果花",
+			"pro_price": "￥299.00"
+		}
+	]
+}
