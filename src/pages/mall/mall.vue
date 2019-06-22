@@ -4,18 +4,9 @@
 		<Header></Header>
 		<!--导航区-->
 		<Shop_item></Shop_item>
-		<!--<nav class="nav2">
-			<ul>
-				<li class="all_list"><a href="#">全部商品分类 <img src="../../assets/logo/nav_all_classify.png"/></a></li>
-				<li><a href="#">首页</a></li>
-				<li><a href="#">闪购促销</a></li>
-				<li><a href="#">最新活动</a></li>
-				<li><a href="#">免费试吃</a></li>
-			</ul>
-		</nav>-->
 		<!--轮播区-->
 		<section class="banner">
-			<Banner swiperid="homeswiper" paginationtype="bullets" effecttype="coverflow" :autoplaytype=true :looptype=false>
+			<Banner swiperid="homeswiper" paginationtype="bullets" effecttype="fade" :autoplaytype=true :looptype=false>
 				<div slot="swiper_con" class="swiper-slide">
 					<img src="http://img.guocool.com/product/2018/06/20/2a2ee8051a4549e88550db03fb96cca9.jpg" />
 				</div>
@@ -32,17 +23,45 @@
 		</section>
 		<!--广告区-->
 		<section class="advertisement">
-			<img src="../../assets/logo/index_ad.jpg"/>
+			<img src="../../assets/logo/index_ad.jpg" />
 			<div class="adv_img">
-				<a href="#"><img src="../../assets/mallImg/index_ad1.jpg"/></a>
-				<a href="#"><img src="../../assets/mallImg/index_ad2.jpg"/></a>
-				<a href="#"><img src="../../assets/mallImg/index_ad3.jpg"/></a>
+				<a href="#" @mouseover="isShow=1" @mouseout="isShow=0">
+					<img src="../../assets/mallImg/index_ad1.jpg" />
+					<div class="adv_mask" :class="{ active:isShow==1}">
+						<b>企业日配福利</b><br />
+						提供高性价比水果及下午茶配送服务<br />
+						<span>Provide cost-effective fruit and afternoon tea delivery service</span>
+					</div>
+				</a>
+				<a href="#" @mouseover="isShow=2" @mouseout="isShow=0">
+					<img src="../../assets/mallImg/index_ad2.jpg" />
+					<div class="adv_mask" :class="{ active:isShow==2}">
+						<b>茶歇活动礼品</b><br />活动摆台，会议茶歇，节日礼品一站式服务<br />
+						<span>Activity setting, conference tea break, holiday gift one-stop service</span>
+					</div>
+				</a>
+				<a href="#" @mouseover="isShow=3" @mouseout="isShow=0">
+					<img src="../../assets/mallImg/index_ad3.jpg" />
+					<div class="adv_mask" :class="{ active:isShow==3}">
+						<b>新零售合作</b><br />提供即食鲜果类完整产品解决方案<br />
+						<span>Provide complete product solutions for the most professional and available fresh fruits</span>
+					</div>
+				</a>
 			</div>
 		</section>
 		<!--产品模块-->
-		<section class="produList">
-			<FruitsModel></FruitsModel>
-		</section>
+		<FruitsModelA>
+			<div slot="title" class="produ_title"><i></i><span>》专利分格</span></div>
+			<a slot="more" class="more">更多>> </a>
+		</FruitsModelA>
+		<FruitsModelB>
+			<div slot="title" class="produ_title"><i class="i_icon2"></i><span>》彩虹果杯</span></div>
+			<a slot="more" class="more">更多>> </a>
+		</FruitsModelB>
+		<FruitsModelC>
+			<div slot="title" class="produ_title"><i class="i_icon3"></i><span>》特别定制</span></div>
+			<a slot="more" class="more">更多>> </a>
+		</FruitsModelC>
 		<!--底部-->
 		<Footer></Footer>
 	</div>
@@ -52,23 +71,39 @@
 	import Header from "../../components/header"
 	import Footer from "../../components/footer"
 	import Banner from "../../components/banner"
-	import FruitsModel from "../../components/fruitsModel"
 	import Shop_item from "../../components/shop_item"
+	import FruitsModelA from "./fruitsModelA"
+	import FruitsModelB from "./fruitsModelB"
+	import FruitsModelC from "./fruitsModelC"
+	
 	export default {
-		components:{
-			Header,Footer,Banner,FruitsModel,Shop_item
+		data(){
+			return{
+				isShow:0
+			}
+		},
+		components: {
+			Header,
+			Footer,
+			Banner,
+			FruitsModelA,
+			FruitsModelB,
+			FruitsModelC,
+			Shop_item
 		}
-  }
+	}
 </script>
 
 <style lang="less">
 	/*头部*/
-	.headWarp{
+	
+	.headWarp {
 		z-index: 99;
 		background: #fff;
 	}
 	/*导航区*/
-	.nav2{
+	
+	.nav2 {
 		margin-top: 122px;
 		padding-left: 220px;
 		box-sizing: border-box;
@@ -77,25 +112,26 @@
 		line-height: 35px;
 		color: #fff;
 		background: #FF0000;
-		ul{
+		ul {
 			overflow: hidden;
-			li{
+			li {
 				float: left;
 				margin-right: 50px;
-				a{
+				a {
 					display: block;
 					color: #fff;
 					padding: 0 8px;
 				}
 			}
-			.all_list{
-				img{
+			.all_list {
+				img {
 					vertical-align: middle;
 				}
 			}
 		}
 	}
 	/*轮播区,切换方式要改。。。*/
+	
 	.banner {
 		.swiper-container {
 			width: 100%;
@@ -105,53 +141,77 @@
 		}
 	}
 	/*广告区*/
-	.advertisement{
+	
+	.advertisement {
 		text-align: center;
-		.adv_img{
-			a{
+		.adv_img {
+			a {
 				display: inline-block;
 				margin-right: 5px;
+				position: relative;
+				.adv_mask{
+					transition: all 0.4s;
+					position: absolute;
+					top: 0;
+					left: 0;
+					color: #000;
+					width: 380px;
+					height: 310px;
+					padding-top: 30%;
+					box-sizing: border-box;
+					opacity: .8;
+					background: #fff;
+					display: none;
+					span{
+						color: #666;
+					}
+				}
+			}
+			div.active{
+				display: block;
+				transition: all 0.4s;
+				animation: move 0.2s;
+			}
+			@keyframes move{
+				0%{top: 310px;}
+				25%{top: 250px;}
+				50%{top: 150px;}
+				75%{top: 100px;}
+				100%{top: 0px;}
 			}
 		}
+		
 	}
 	/*产品列表模块*/
-	.produList{
-		width: 1200px;
-		margin: 0 auto;
-		text-align: center;
+	
+	.produ_title {
+		float: left;
+		i {
+			display: inline-block;
+			width: 35px;
+			height: 35px;
+			background: url(../../assets/logo/icon_goods_1.png) no-repeat;
+		}
+		.i_icon2{
+			background-image: url(../../assets/logo/icon_goods_2.png);
+		}
+		.i_icon3{
+			background-image: url(../../assets/logo/icon_goods_4.png);
+		}
+		span {
+			position: relative;
+			top: -6px;
+		}
 	}
-	.produ_title{
-		height: 35px;
-		line-height: 35px;
-		border-bottom: 3px solid #E51E13;
-		>div{
-			float: left;
-			&::before{
-				content: '';
-				display: inline-block;
-				clear: both;
-				width: 35px;
-				height: 35px;
-				background: url(../../assets/logo/icon_goods_1.png) no-repeat;
-			}
-			span{
-				position: relative;
-    			bottom: 11px;
-    			color: #616161;
-			}
-		}
-		.subtitle{
-			overflow: hidden;
-			float: left;
-			margin-left: 25%;
-			li{
-				float: left;
-				margin-right: 10px;
-			}
-		}
+	.more{
+		float: right;
+		font-size: 12px;
+		color: #666;
+		margin-top: 20px;
 	}
 	/*底部*/
-	.footerWarp{
+	
+	.footerWarp {
 		position: relative;
 	}
 </style>

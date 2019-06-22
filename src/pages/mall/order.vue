@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<Header></Header>
-		<Shopitem></Shopitem>
 		<div id="orderWarp">
 			<div class="debg">
 				<div class="Tmsg">
@@ -123,16 +122,15 @@
 <script>
 	import Header from '../../components/header'
 	import Footer from '../../components/footer'
-	import Shopitem from '../../components/shop_item'
 	export default {
 		components: {
-			Header,Shopitem,Footer
+			Header,Footer
 		}
 	}
 </script>
 <style lang="less">
 	#orderWarp {
-		/*margin-top: 150px;*/
+		margin-top: 150px;
 		.debg {
 			width: 1200px;
 			margin: 0 auto;

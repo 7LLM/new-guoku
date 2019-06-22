@@ -4,18 +4,71 @@
 			<div id="shoop">
 				<h3 class="all">全部商品分类 <img style="vertical-align: middle;" src="../assets/logo/nav_all_classify.png"/></h3>
 				<ul class="content">
-					<!--<li v-for="item in arr">
-						<i></i>
-						<a href="#">{{item.shoop}}</a>
-						<span>></span>
-					</li>-->
-					<li><a href="#"><i class="demo demo1"></i>专利分格</a><span>></span></li>
-					<li><a href="#"><i class="demo demo2"></i>彩虹过杯</a><span>></span></li>
-					<li><a href="#"><i class="demo demo3"></i>特别定制</a><span>></span></li>
-					<li><a href="#"><i class="demo demo4"></i>创意果切</a><span>></span></li>
-					<li><a href="#"><i class="demo demo5"></i>节日精选</a><span>></span></li>
-					<li><a href="#"><i class="demo demo6"></i>进口水果</a><span>></span></li>
-					<li><a href="#"><i class="demo demo7"></i>国产水果</a><span>></span></li>
+					<li>
+						<a href="#"><i class="demo demo1"></i>专利分格</a><span>></span>
+						<div class="content_menu">
+							<div><a href="#">超级果盒</a></div>
+							<div><a href="#">三分果盒</a></div>
+							<div><a href="#">两分果盒</a></div>
+							<div><a href="#">迷你果盒</a></div>
+						</div>
+					</li>
+					<li>
+						<a href="#"><i class="demo demo2"></i>彩虹过杯</a><span>></span>
+						<div class="content_menu">
+							<div><a href="#">彩虹果杯</a></div>
+							<div><a href="#">大型果杯</a></div>
+							<div><a href="#">中型果杯</a></div>
+							<div><a href="#">标准果杯</a></div>
+							<div><a href="#">小型果杯</a></div>
+						</div>
+					</li>
+					<li>
+						<a href="#"><i class="demo demo3"></i>特别定制</a><span>></span>
+						<div class="content_menu">
+							<div><a href="#">袋袋果切</a></div>
+							<div><a href="#">水果甜品</a></div>
+							<div><a href="#">酷卡</a></div>
+							<div><a href="#">方砖果杯</a></div>
+							<div><a href="#">钻石果杯</a></div>
+						</div>
+					</li>
+					<li>
+						<a href="#"><i class="demo demo4"></i>创意果切</a><span>></span>
+						<div class="content_menu">
+							<div><a href="#">方盒果切</a></div>
+							<div><a href="#">酸奶果杯</a></div>
+							<div><a href="#">沙拉果杯</a></div>
+							<div><a href="#">标能力果华</a></div>
+							<div><a href="#">炫彩果盘</a></div>
+						</div>
+					</li>
+					<li>
+						<a href="#"><i class="demo demo5"></i>节日精选</a><span>></span>
+						<div class="content_menu">
+							<div><a href="#">圣诞节</a></div>
+							<div><a href="#">中秋节</a></div>
+							<div><a href="#">万圣节</a></div>
+						</div>
+					</li>
+					<li>
+						<a href="#"><i class="demo demo6"></i>进口水果</a><span>></span>
+						<div class="content_menu">
+							<div><a href="#">热带水果</a></div>
+							<div><a href="#">冷冻榴莲</a></div>
+							<div><a href="#">车厘子</a></div>
+							<div><a href="#">奇异果</a></div>
+						</div>
+					</li>
+					<li>
+						<a href="#"><i class="demo demo7"></i>国产水果</a><span>></span>
+						<div class="content_menu">
+							<div><a href="#">时令水果</a></div>
+							<div><a href="#">瓜/甜瓜</a></div>
+							<div><a href="#">柑橘橙柚</a></div>
+							<div><a href="#">苹果</a></div>
+						</div>
+					</li>
 				</ul>
 			</div>
 			
@@ -39,19 +92,6 @@
 </template>
 <script>
 	export default{
-		data(){
-			return{
-				arr:[
-					{shoop:"专利分格"},
-					{shoop:"彩虹过杯"},
-					{shoop:"特别定制"},
-					{shoop:"创意果切"},
-					{shoop:"节日精选"},
-					{shoop:"进口水果"},
-					{shoop:"国产水果"}
-				]
-			}
-		}
 		
 	}
 </script>
@@ -86,7 +126,7 @@
 		background: red;
 		position: absolute;
 		width: 200px;
-		z-index: 99;
+		z-index: 9;
 	}
 	.content>li{
 		display: flex;
@@ -148,9 +188,33 @@
 		.demo7{
 			background-position: -26px -169px;
 		}
+		.content_menu{
+			display: block;
+		}
 	}
-	.content>li:hover a{
+	.content>li:hover>a{
 		color: #FF0000;
+		text-decoration: underline;
+	}
+	.content>ul{
+		position: relative;
+	}
+	.content_menu{
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 200px;
+		width: 150px;
+		height: 420px;
+		text-align: center;
+		padding-top: 30px;
+		background: #fff;
+		a{
+			color: #666;
+		}
+	}
+	.content_menu>div:hover a{
+		color: orange;
 		text-decoration: underline;
 	}
 	#shoop{

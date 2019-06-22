@@ -7,15 +7,12 @@
 				<router-link to="/home"><img src="../../assets/homeImg/s_03.png" /></router-link>
 				<ul>
 					<li>
-						<!--<a href="#">首页</a>-->
 						<router-link to="/home">首页</router-link>
 					</li>
 					<li>
-						<!--<a href="#">会员商城</a>-->
 						<router-link to="/mall">会员商城</router-link>
 					</li>
 					<li>
-						<!--<a href="#">招商加盟</a>-->
 						<router-link to="/joinIn">招商加盟</router-link>
 					</li>
 				</ul>
@@ -28,8 +25,8 @@
 			<!--搜索框部分-->
 			<div class="head_search">
 				<form action="#">
-					<input type="search" placeholder="您今天想吃什么水果？搜下看看，有惊喜" />
-					<img src="../../assets/homeImg/s_10.png" alt="" />
+					<input type="search" placeholder="您今天想吃什么水果？搜下看看，有惊喜" @keyup.enter="router"/>
+					<router-link to="/seach"><img src="../../assets/homeImg/s_10.png" alt="" /></router-link>
 				</form>
 				<ul class="head_searchTxt">
 					<li>
@@ -124,7 +121,7 @@
 					We offer fresh fruit and related products with<br />
 					the highest performance price ratio
 				</p>
-				<a href="#"><img src="../../assets/homeImg/home1_09.png"/></a>
+				<router-link to="/resets"><img src="../../assets/homeImg/home1_09.png"/></router-link>
 			</div>
 		</section>
 		<!--申请体验部分-->
@@ -182,6 +179,11 @@
 	export default {
 		components: {
 			Banner,Footer
+		},
+		methods:{
+			router(){
+				this.$router.push("/seach");
+			}
 		}
 	}
 </script>

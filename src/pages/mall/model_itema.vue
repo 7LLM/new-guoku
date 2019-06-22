@@ -1,23 +1,26 @@
 <template>
-	<div class="pro_list">
-		<slot name="listLeft"></slot>
-		<div class="listRight">
-			<div class="listRight_item" v-for="(item,index) in pro" :key="index" v-show="index<=5">
-				<a href="#">
-					<img :src="item.img_url" />
-					<p class="pro_name">{{item.produ_name}}</p>
-					<p class="pro_price">{{item.pro_price}}</p>
-				</a>
-			</div>
+	<div @mouseenter="fn" :class="{active:flag}">
+		<slot name="subtitle"></slot>
+		<div v-show="flag">
+			<slot name="content"></slot>
 		</div>
 	</div>
 </template>
 
 <script>
 	export default {
-		data(){
-			return{
-				pro:[]
+		data() {
+			return {
+				pro: []
+			}
+		},
+		props: ["mark", "selected"],
+		computed: {
+			flag: function() {
+				if(this.mark == this.selected) {
+					return true;
+				}
+				return false;
 			}
 		},
 		mounted() {
@@ -30,52 +33,21 @@
 				}).catch(err => {
 					console.log(err)
 				})
+		},
+		methods: {
+			fn() {
+				this.$emit("change", this.mark);
+			}
 		}
 	}
 </script>
 
-<style lang="less" scoped="scoped">
+<style lang="less" scoped>
 	/*产品模块内容*/
-	.pro_list {
-		width: 100%;
-		display: flex;
-		.listLeft {
-			width: 425px;
-			height: 548px;
-			border-bottom: 1px solid #DDDDDD;
-			border-right: 1px solid #DDDDDD;
-			img {
-				width: 425px;
-				height: 548px;
-			}
-		}
-		.listRight {
-			width: 70%;
-			display: flex;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			padding: 10px 0;
-			.listRight_item {
-				margin-bottom: 10px;
-				a {
-					display: block;
-					.pro_price {
-						color: #E51E13;
-						font-size: 14px;
-					}
-					.pro_name {
-						color: #000;
-						font-size: 12px;
-					}
-				}
-			}
-			.listRight_item:hover{
-				box-shadow: 0 0 8px 8px gainsboro;
-			}
-			img {
-				width: 200px;
-				height: 200px;
-			}
+	.active {
+		.subtitle {
+			color: #fff;
+			background: red;
 		}
 	}
 </style>

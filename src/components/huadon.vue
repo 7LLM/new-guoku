@@ -37,7 +37,6 @@
                 document.getElementsByClassName('drag_text')[0].style.color = '#fff'
                 document.getElementsByClassName('handler')[0].style.left = this.maxwidth + 'px';
                 document.getElementsByClassName('drag_bg')[0].style.width = this.maxwidth + 'px';
-            	this.$emit("cl",this.confirmSuccess);
             },                //验证成功函数
             mouseMoveFn(e){
                 if(this.mouseMoveStata){
@@ -71,7 +70,7 @@
     .drag{
         position: relative;
         background-color: #e8e8e8;
-        width: 270px;
+        width: 240px;
         height: 34px;
         line-height: 34px;
         text-align: center;

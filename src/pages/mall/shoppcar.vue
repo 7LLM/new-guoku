@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<Header></Header>
-		<Shopitem></Shopitem>
 		<section class="shopping">
 			<div class="warp">
 				<div class="S_top">
@@ -64,7 +63,6 @@
 <script>
 	import Header from '../../components/header'
 	import Footer from '../../components/footer'
-	import Shopitem from '../../components/shop_item'
 	export default {
 			data(){
 			return{
@@ -98,7 +96,7 @@
 		},
 		components: {
 			Header,
-			Footer,Shopitem
+			Footer
 		}
 	}
 </script>

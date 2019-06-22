@@ -23,6 +23,7 @@
 			effecttype:{type:String,default:"swiper"},//切换样式
 			autoplaytype:{type:Boolean,default:true},//自动切换
 			looptype:{type:Boolean,default:true}// 循环模式选项
+//			navigationtype:{}
 		},
 		mounted:function(){
 			new Swiper ('.'+this.swiperid, {
@@ -44,6 +45,15 @@
 	}
 </script>
 
-<style lang="less" scoped="scoped">
-	
+<style lang="less">
+	.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+		color: #fff;
+		font-size: 14px;
+		background-color: rgba(0,0,0,.2);
+	}
+	.swiper-button-prev, .swiper-container-rtl .swiper-button-prev{
+		color: #fff;
+		font-size: 14px;
+		background-color: rgba(0,0,0,.2);
+	}
 </style>

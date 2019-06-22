@@ -1,68 +1,16 @@
 <template>
 	<div class="headWarp">
-		<div class="filex" v-show="isShow">
-			<i class="xx" @click="close"></i>
-			   <el-tabs v-model="activeName" @tab-click="handleClick">
-				    <el-tab-pane label="账号密码登录" name="first">
-				    	
-				    	<ul id="logul">
-				    		<li class="logul_li">用户名/已验证手机</li>
-				    		<li class="li_p">
-				    			<input type="text" id="log_name"/>
-				    		</li>
-				    		<li class="logul_li">密码</li>
-				    		<li class="li_p">
-				    			<input id="log_pwd" :type="type"/>
-				    		</li>
-				    		<li class="link">
-				    			<a href="#">忘记密码?</a>
-				    			<router-link to="/resets">点击注册</router-link>
-				    		</li>
-				    		<li>
-				    			<input type="button" id="btn" value="登 录"/>
-				    		</li>
-				    	</ul>
-				    </el-tab-pane>
-				    <el-tab-pane label="手机验证码登录" name="second">
-				    	<ul id="phone_log">
-				    		<li class="logul_li">
-				    			已验证手机
-				    		</li>
-				    		<li>
-				    			<input id="phone_name" type="text" />
-				    		</li>
-				    		<li>
-				    			<Huadon></Huadon>
-				    		</li>
-				    		<li class="logul_li">验证码</li>
-				    		<li style="margin: 10px 0;display: flex;">
-				    			<input id="phone_pwd" type="text">
-				    			<a id="phone_click" href="javascript:;">获取短信验证码</a>
-				    		</li>
-				    		<li class="link">
-				    			<a href="#">忘记密码?</a>
-				    			<a href="#">点击注册</a>
-				    		</li>
-				    		<li>
-				    			<input type="button" id="btn" value="登 录"/>
-				    		</li>
-				    	</ul>
-				    </el-tab-pane>
-			  </el-tabs>
-		</div>
 		<header class="header">
 			<div class="h_Top">
 				<div class="h_Left">收藏果酷</div>
 				<ul class="h_Right">
 					<li>
-						<a href="javascript:;" @click="login">请登录</a>
+						<router-link to="/login">请登录</router-link>
 					</li>
 					<li>
-						<!--<a href="#">免费注册</a>-->
 						<router-link to="/resets">免费注册</router-link>
 					</li>
 					<li>
-						<!--<a href="#">我的订单</a>-->
 						<router-link to="/order">我的订单</router-link>
 					</li>
 					<li>
@@ -77,7 +25,7 @@
 						<router-link to="/home"></router-link>
 					</div>
 					<div class="fromNav">
-						<p class="fromI"><input type="text" name="" id="" placeholder="请输入要搜索的水果" /></p>
+						<p class="fromI"><input type="text" name="" id="" placeholder="请输入要搜索的水果" @keyup.enter="router"/></p>
 						<div class="navTitle">
 							<ul>
 								<li v-for="(item,index) in headarr" @mouseout="fn(item)" @mouseleave="!fn(item)" :class="{active:item.ishow}">
@@ -98,18 +46,13 @@
 				</div>
 			</div>
 		</nav>
-		<div id="filter" v-show="isShow"></div>
 	</div>
 </template>
 
 <script>
-import	Huadon from "./huadon"
 	export default {
 		data() {
 			return {
-				 activeName: 'first',
-		         type:"password",
-		         isShow:false,
 				headarr:[ 
 				    {English:"HOME",showNav:'HOME',chinese:"首页",ishow:false},
 				    {English:"SALES",showNav:'SALES',chinese:"闪购促销",ishow:false},
@@ -118,11 +61,9 @@ import	Huadon from "./huadon"
 				]
 			}
 		},
-		components:{
-    		Huadon
-   		 },
 		methods:{
 			fn(item){
+//				console.log(item.showNav,item.showNav==item.English)
 				if(item.showNav==item.English){
 					item.showNav=item.chinese
 					item.ishow=true;
@@ -131,162 +72,20 @@ import	Huadon from "./huadon"
 					item.ishow =false;
 				}
 			},
-				 handleClick(tab,event) {
-		      },
-		      login(){
-		      	this.isShow=true
-		      },
-		      close(){
-		      	this.isShow=false
-		      }
+			router(){
+				this.$router.push("/seach");
+			}
 		}
 	}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
-.el-tabs__nav-scroll{
-	    font-size: 12px;
-	    font-weight: bold;
-	    text-indent: 10px;
-	    background: #f5f5f5;
-	}
-	.el-tabs__content{
-		overflow: none;
-	}
-	
-	.filex{
-		    width: 410px;
-		    height: 334px;
-		    position: fixed;
-		    top: 50%;
-		    left: 50%;
-		    margin-top: -167px;
-		    margin-left: -205px;
-		    background: #fff;
-		    border: solid 1px #c4c4c4;
-		    z-index: 99999;
-		    /*position: relative;*/
-		    .xx{
-			    position: absolute;
-				width: 23px;
-				height: 23px;
-				background: url(../assets/logo/index.png)no-repeat 0 -72px;
-				margin-top: 3px;
-				margin-right: 3px;
-				right: 5px;
-				top: 5px;
-				z-index: 199999;
-			}
-	}
-	#filter{
-		width: 100%;
-		height: 2000px;
-		position: absolute;
-		top: 120px;
-		left: 0px;
-		opacity: 0.5;
-		background: rgb(0, 0, 0);
-		z-index: 1000;
-	}
-	 #phone_log{
-	 	    font-size: 12px;
-		    width: 270px;
-		    margin: auto;
-		    margin-top: 20px;
-		    .logul_li{
-	    	    color: #c0c0c0;
-   				margin: 10px 0;
-	   		 }
-		    #phone_name{
-		    	    width: 233px;
-				    padding: 6px 30px 6px 5px;
-				    border: solid 1px #e1e1e1;
-				    background: url(../assets/logo/index.png)no-repeat 241px -100px;
-				    margin-bottom: 13px
-		    }
-		    #phone_pwd{
-		    	width: 133px;
-				padding: 6px 30px 6px 5px;
-				border: solid 1px #e1e1e1;
-				background: url(../assets/logo/index.png)no-repeat 142px -126px;
-		    }
-		    #phone_click {
-			    border: 1px solid #ddd;
-			    background: #ddd;
-			    padding: 6px;
-			    text-align: center;
-			    color: #666666;
-			    
-			}
-			#phone_click:hover{
-				color: red;
-			}
-			.link{
-	    		margin:10px 0;
-		    	a{
-		    		margin-right: 10px;
-		    		color: #005aa4;
-		    	}
-	    	}
-	   		 #btn{
-	    	    width: 270px;
-			    height: 35px;
-			    border: 0px;
-			    border-top: solid 1px #f7c47b;
-			    border-bottom: solid 1px #f7c47b;
-			    background: #e51e13;
-			    color: #fff;
-			    font-size: 16px;
-			    cursor: pointer
-	    	}
-	 }
-	#logul{
-		font-size: 12px;
-	    width: 270px;
-	    margin: auto;
-	    margin-top: 20px;
-	    .logul_li{
-	    	    color: #c0c0c0;
-   				margin-bottom: 5px
-	    }
-	    #log_name{
-	    	width: 233px;
-			padding: 6px 30px 6px 5px;
-			border: solid 1px #e1e1e1;
-			background: url(../assets/logo/index.png)no-repeat 241px -100px;
-			margin-bottom: 8px
-	    }
-	    #log_pwd{
-	    	width: 233px;
-		    padding: 6px 30px 6px 5px;
-		    border: solid 1px #e1e1e1;
-		    background: url(../assets/logo/index.png)no-repeat 241px -126px;
-	    }
-	    .link{
-	    	margin:10px 0;
-	    	a{
-	    		margin-right: 10px;
-	    		color: #005aa4;
-	    	}
-	    }
-	    #btn{
-	    	    width: 270px;
-			    height: 35px;
-			    border: 0px;
-			    border-top: solid 1px #f7c47b;
-			    border-bottom: solid 1px #f7c47b;
-			    background: #e51e13;
-			    color: #fff;
-			    font-size: 16px;
-			    cursor: pointer
-	    }
-	}
 	.headWarp {
 		width: 100%;
 		position: fixed;
 		top: 0;
-		z-index: 55;
+		z-index: 99;
 		background: #FFFFFF;
 		.header {
 			border-bottom: 1px solid #ccc;
