@@ -8,7 +8,6 @@ import Detail from '@/pages/mall/detail'
 import Reset from '@/pages/Reset/resets'
 import Seach from '@/components/seach'
 import Order from '@/pages/mall/order'
-import	Login	from "@/components/login"
 Vue.use(Router)
 
 export default new Router({
@@ -25,7 +24,6 @@ export default new Router({
     {path:"/joinIn",name:"JoinIn",component:JoinIn},
     {path:"/Mall",name:"Mall",component:Mall},
     {path:"/seach",name:"Mall",component:Seach},
-    {path:"/login",component:Login},
     {path:"/order",name:"order",component:Order}
 
   ]
