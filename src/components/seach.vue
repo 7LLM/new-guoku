@@ -47,10 +47,10 @@
 					<div class="da_right">
 						<div class="da_top">
 							<ul class="da_ti_rt">
-								<li>综合</li>
-								<li>新品</li>
-								<li>销量</li>
-								<li>价格</li>
+								<li :class="{active:item.flag}" @click="fn(item)" v-for="(item,index) in temp">{{item.title}}</li>
+								<!--<li :class="{active:this.flag}" @click="fn"></li>
+								<li :class="{active:this.flag}" @click="fn"></li>
+								<li :class="{active:this.flag}" @click="fn"></li>-->
 							</ul>
 						</div>
 						
@@ -75,6 +75,13 @@
 						</Item>
 					</div>
 				</div>
+				<div style="text-align: right; margin: 10px;">
+					<el-pagination
+					  background
+					  layout="prev, pager, next"
+					  :total="100">
+					</el-pagination>
+				</div>
 			</div>
 		</section>
 		<Footer></Footer>
@@ -92,7 +99,13 @@
 		},
 		data() {
 			return {
-				arr: []
+				arr: [],
+				temp:[
+				    {title:"综合",flag:true},
+				    {title:"新品",flag:false},
+				    {title:"数量",flag:false},
+				    {title:"价格",flag:false}
+				]
 			}
 		},
 		methods: {
@@ -105,6 +118,9 @@
 					.catch(err => {
 						console.log(err)
 					})
+			},
+			fn(item){
+				item.flag=!item.flag;
 			}
 		},
 		mounted() {
@@ -134,8 +150,26 @@
 			line-height:23px;
 			background: #fff;
 			border: 1px solid #ccc;
+			position: relative;
 			text-align: center;
-			/*border-left: none;*/
+			&:after{
+				content: '';
+				display: block;
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				right: 0;
+				top: 0;
+				background:url(../assets/logo/inner.png) 6px -81px no-repeat;
+			}
+			&:nth-of-type(4){
+				&:after{
+				   background-position: 6px -118px;
+				}
+			}
+			&.active{
+				background: #FF0000;
+			}
 			&:not(:first-child){
 				border-left: none;
 			}

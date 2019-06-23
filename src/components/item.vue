@@ -21,8 +21,8 @@
 	}
 	#box{
 		margin-top: 125px;
+		display: flex;
 		.da_left{
-			float: left;
 			width: 200px;
 			margin-right: 10px;
 			border: 1px solid #ccc;
@@ -62,8 +62,8 @@
 				width: 205px;
 				height: 345px;
 				float: left;
-				margin:0 20px;
-				margin-bottom: 28px;
+				margin:10px 20px;
+				margin-bottom: 18px;
 				padding: 10px;
 				box-sizing:border-box;
 				.da_des{
@@ -92,11 +92,14 @@
 					}
 				}
 				.currImg{
-					width: 200px;
+					width: 190px;
 					height: 200px;
 					img{
 						width:100%;
 					}
+				}
+				&:hover{
+					box-shadow: 0 2px 6px #616161;
 				}
 			}
 			.da_bottom{
