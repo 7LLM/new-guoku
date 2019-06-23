@@ -62,6 +62,32 @@
 			<div slot="title" class="produ_title"><i class="i_icon3"></i><span>》特别定制</span></div>
 			<a slot="more" class="more">更多>> </a>
 		</FruitsModelC>
+		<!--侧边导航-->
+		<section class="side_nav" v-if="btnFlag">
+			<ul>
+				<li @mouseenter="currIndex=1" @mouseleave="currIndex=9">
+					<a href="#"><i class="server"></i></a>
+					<div class="hide" :class="{active:currIndex==1}">企业在线</div>
+				</li>
+				<li @mouseenter="currIndex=2" @mouseleave="currIndex=9">
+					<a href="#"><i class="service"></i></a>
+					<div class="hide" :class="{active:currIndex==2}">在线客服</div>
+				</li>
+				<li @mouseenter="currIndex=3" @mouseleave="currIndex=9">
+					<a href="#"><i class="phone"></i></a>
+					<div class="hide" :class="{active:currIndex==3}">400-6900-621</div>
+				</li>
+				<li @mouseenter="currIndex=4" @mouseleave="currIndex=9">
+					<a href="#"><i class="wechat"></i></a>
+					<div class="hide2" :class="{active:currIndex==4}">
+						<img src="../../assets/logo/weixin.png" />
+					</div>
+				</li>
+				<li class="toTopLi" @click="backTop">
+					<a href="javascript:;"><i class="toTop"></i></a>
+				</li>
+			</ul>
+		</section>
 		<!--底部-->
 		<Footer></Footer>
 	</div>
@@ -79,7 +105,9 @@
 	export default {
 		data(){
 			return{
-				isShow:0
+				isShow:0,
+				currIndex: 9,
+				btnFlag: true
 			}
 		},
 		components: {
@@ -90,7 +118,36 @@
 			FruitsModelB,
 			FruitsModelC,
 			Shop_item
-		}
+		},
+		mounted() {
+				window.addEventListener('scroll', this.scrollToTop)
+			},
+			destroyed() {
+				window.removeEventListener('scroll', this.scrollToTop)
+			},
+			methods: {
+				backTop() {
+					let that = this
+					let timer = setInterval(() => {
+						let ispeed = Math.floor(-that.scrollTop / 5)
+						document.documentElement.scrollTop = document.body.scrollTop = that.scrollTop + ispeed
+						console.log(ispeed)
+						if(that.scrollTop === 0) {
+							clearInterval(timer)
+						}
+					}, 16)
+				},
+				scrollToTop() {
+					let that = this
+					let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+					that.scrollTop = scrollTop
+					if(that.scrollTop > 200) {
+						that.btnFlag = true
+					} else {
+						that.btnFlag = false
+					}
+				}
+			}
 	}
 </script>
 
@@ -209,6 +266,83 @@
 		color: #666;
 		margin-top: 20px;
 	}
+	
+	/*侧边导航*/
+	.side_nav {
+		height: 100%;
+		width: 40px;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 6;
+		background: #fff;
+		ul {
+			height: 60%;
+			width: 40px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			li {
+				margin: 20px 0;
+				position: relative;
+				a {
+					display: block;
+					width: 40px;
+					height: 40px;
+					i {
+						display: block;
+						width: 34px;
+						height: 20px;
+						background: url(../../assets/logo/icon_enterprise.png) no-repeat;
+					}
+					.service {
+						height: 26px;
+						background-image: url(../../assets/logo/icon_service.png);
+					}
+					.phone {
+						background-image: url(../../assets/logo/icon_phone.png);
+					}
+					.wechat {
+						background-image: url(../../assets/logo/icon_weixin.png);
+					}
+					.toTop {
+						height: 30px;
+						background-image: url(../../assets/logo/icon_top.png);
+					}
+				}
+				.hide {
+					color: #fff;
+					font-size: 14px;
+					width: 140px;
+					height: 40px;
+					line-height: 40px;
+					background: red;
+					text-indent: 10px;
+					position: absolute;
+					top: 0;
+					left: -100px;
+					display: none;
+				}
+				.hide2 {
+					width: 182px;
+					height: 100px;
+					position: absolute;
+					top: -42px;
+					left: -193px;
+					display: none;
+				}
+			}
+			.toTopLi {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+			div.active {
+				display: block;
+			}
+		}
+	}
+	
 	/*底部*/
 	
 	.footerWarp {

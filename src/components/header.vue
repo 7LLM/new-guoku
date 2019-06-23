@@ -77,7 +77,7 @@
 						<router-link to="/home"></router-link>
 					</div>
 					<div class="fromNav">
-						<p class="fromI"><input type="text" name="" id="" placeholder="请输入要搜索的水果" /></p>
+						<p class="fromI"><input type="text" name="" id="" placeholder="请输入要搜索的水果" @keyup.enter="router"/></p>
 						<div class="navTitle">
 							<ul>
 								<li v-for="(item,index) in headarr" @mouseout="fn(item)" @mouseleave="!fn(item)" :class="{active:item.ishow}">
@@ -138,7 +138,10 @@ import	Huadon from "./huadon"
 		      },
 		      close(){
 		      	this.isShow=false
-		      }
+		      },
+		      router(){
+				this.$router.push("/seach");
+			}
 		}
 	}
 </script>

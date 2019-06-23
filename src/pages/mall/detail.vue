@@ -30,7 +30,7 @@
 			</div>
 			<div class="select_right">
 				<h3 class="title">迷你果盒：应季流行</h3>
-				<div class="price">商品价格： <span>￥6.00</span></div>
+				<div class="price">商品价格： <span>￥16.00</span></div>
 				<div class="type">
 					<span>规格：</span>
 					<ul>
@@ -265,15 +265,16 @@
 					text-align: center;
 					background: gainsboro;
 					span{
-						display: inline-block;
+						float: left;
 						width: 20px;
 						cursor: pointer;
 					}
 					input{
+						float: left;
 						outline: none;
-						width: 36px;
+						width: 40px;
+						height: 22px;
 						text-align: center;
-						margin: 0 2px;
 					}
 				}
 			}

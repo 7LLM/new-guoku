@@ -14,8 +14,8 @@
 				<div class="S_center">
 					<div class="S_center_first">
 						<form action="#">
-							<input type="checkbox" name="" id="" value="全选" />
-							<label for="">全选</label>
+							<input type="checkbox" value="全选" />
+							<label>全选</label>
 						</form>
 						<p class="msg">商品信息</p>
 						<p>市场价(元)</p>
@@ -25,7 +25,7 @@
 						<p>操作</p>
 					</div>
 					<div class="S_center_second" v-for="(item,index) in arr" >
-						<form><input type="checkbox" name="" id="" value="全选" /></form>
+						<form><input type="checkbox"  value="全选" /></form>
 						<div class="s_Msg">
 							<a href="#"><img src="../../assets/mallImg/huifruits_05.jpg"/></a>
 							<p><a href="#">{{item.title}}</a></p>
@@ -33,9 +33,9 @@
 						<p>{{item.sprice}}</p>
 						<p>{{item.dprice}}</p>
 						<p class="number">
-							<span @click="muist()">-</span>
-							<input type="text" name="" id="" value="1" v-model="count"/>
-							<span @click="add()">+</span>
+							<span @click="getNumber(item,-1)">-</span>
+							<input type="text" v-model="item.count"/>
+							<span @click="getNumber(item,1)">+</span>
 						</p>
 						<p><span>{{item.zprice}}</span></p>
 						<p @click="del(index)">删除</p>
@@ -66,32 +66,34 @@
 	export default {
 			data(){
 			return{
-				count:1,
 				arr:[
-				   {title:'万圣节主题手工鲜榨果汁',dprice:25.90,zprice:25.90,sprice:25.90},
-				   {title:'万圣节主题手工鲜榨果汁',dprice:24.90,zprice:24.90,sprice:24.90}
+				   {title:'万圣节主题手工鲜榨果汁',dprice:25.00,zprice:25.00,sprice:25.00,count:1},
+				   {title:'万圣节主题手工鲜榨果汁',dprice:24.00,zprice:24.00,sprice:24.00,count:1}
 				]
 			}
 		},
 		methods:{
-			add(){
-				this.count++;
-			},
-            muist(){
-				this.count--;
-				this.count=this.count<1?this.count+1:this.count
-			},
 			toprice(){
 				var total=0;
 				for (var i in this.arr) {
 					var item=this.arr[i];
-					total+=this.count*item.dprice
+					total+=parseInt(item.count*item.dprice)
 					console.log(total)
 				}
 				return total
 			},
 			del(index){
 				this.arr.splice(index,1)
+			},
+			getNumber(item,add){
+				if(add<1){
+					item.count--;
+					if(item.count<1){
+						item.count=1
+					}
+				}else{
+					item.count++;
+				}
 			}
 		},
 		components: {
@@ -216,6 +218,7 @@
 				}
 				>span{
 					width:30px;
+					cursor: pointer;
 				}
 			}
 		}
