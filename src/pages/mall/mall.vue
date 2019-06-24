@@ -107,7 +107,7 @@
 			return{
 				isShow:0,
 				currIndex: 9,
-				btnFlag: true
+				btnFlag: false
 			}
 		},
 		components: {
@@ -206,6 +206,7 @@
 				display: inline-block;
 				margin-right: 5px;
 				position: relative;
+				transition: all 0.4s;
 				.adv_mask{
 					transition: all 0.4s;
 					position: absolute;
