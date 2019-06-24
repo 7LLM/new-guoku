@@ -278,7 +278,7 @@
 			.listRight_item:hover a {
 				box-shadow: 0 0 8px 8px gainsboro;
 				animation: show 0.2s;
-				transition: all 0.2s;
+				transition: all 0.3s;
 				/*动画会停留在最后一帧*/
 				animation-fill-mode: forwards;
 			}

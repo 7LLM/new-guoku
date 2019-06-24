@@ -232,9 +232,10 @@
 			}
 			@keyframes move{
 				0%{top: 310px;}
-				25%{top: 250px;}
-				50%{top: 150px;}
-				75%{top: 100px;}
+				20%{top: 250px;}
+				40%{top: 190px;}
+				60%{top: 130px;}
+				80%{top: 70px;}
 				100%{top: 0px;}
 			}
 		}

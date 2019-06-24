@@ -106,7 +106,7 @@
 <style lang="less">
 .shopping {
 		width: 100%;
-		margin-bottom: 400px;
+		margin-bottom: 40px;
 		.warp {
 			width: 1200px;
 			margin: 0 auto;
@@ -138,7 +138,6 @@
 	.S_center {
 		border-top: 1px solid #ccc;
 		margin-top: 30px;
-		height: 60px;
 		.S_center_first {
 			display: flex;
 			line-height: 60px;
